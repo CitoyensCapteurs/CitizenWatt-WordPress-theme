@@ -200,17 +200,12 @@ function spacious_widgets_init() {
 			<input class="checkbox" type="checkbox" <?php echo $disable_feature_image; ?> id="<?php echo $this->get_field_id('disable_feature_image'); ?>" name="<?php echo $this->get_field_name('disable_feature_image'); ?>" /> <label for="<?php echo $this->get_field_id('disable_feature_image'); ?>"><?php _e( 'Remove Featured image', 'spacious' ); ?></label>
 		</p>
 
-	    <?php if( $image_position == 'above' ) { ?>  
 		<p> 
-		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="above" style="" checked /><?php _e( 'Show Image Before Title', 'spacious' );?><br />  
-		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="below" style="" /><?php _e( 'Show Image After Title', 'spacious' );?><br />              
+		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="above" style="" <?php if ($image_position == 'above') echo 'checked'; ?> /><?php _e( 'Show Image Before Title', 'spacious' );?><br />  
+		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="below" style="" <?php if ($image_position == 'below') echo 'checked'; ?> /><?php _e( 'Show Image After Title', 'spacious' );?><br />              
+		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="left" style="" <?php if ($image_position == 'left') echo 'checked'; ?> /><?php _e( 'Show Image on the Left', 'spacious' );?><br />              
+		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="right" style="" <?php if ($image_position == 'right') echo 'checked'; ?> /><?php _e( 'Show Image on the Right', 'spacious' );?><br />              
 		</p>  
-		<?php } else { ?> 
-		<p>   
-		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="above" style="" /><?php _e( 'Show Image Before Title', 'spacious' );?><br />  
-		    <input type="radio" id="<?php echo $this->get_field_id( 'image_position' ); ?>" name="<?php echo $this->get_field_name( 'image_position' ); ?>" value="below" style="" checked /><?php _e( 'Show Image After Title', 'spacious' );?><br />              
-		</p>  
-		<?php } ?> 
 
 	<?php
 	}
@@ -246,10 +241,11 @@ function spacious_widgets_init() {
 	 			endif;
 	 		}
 	 		if( has_post_thumbnail() && $disable_feature_image != "true" ) {
-	 			$output.= '<div class="service-image">'.get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $page_name ), 'alt' => esc_attr( $page_name ) ) ).'</div>';
+				$floatting = $image_position == "right" ? ' float-right' : ($image_position == "left" ? ' float-left' : '');
+	 			$output.= '<div class="service-image' . $floatting . '">'.get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $page_name ), 'alt' => esc_attr( $page_name ) ) ).'</div>';
 	 		}
 
-	 		if( $image_position == "above" ) {
+	 		if( $image_position != "bellow" ) {
 		 		if( $title ): $output .= $before_title.'<a href="' . get_permalink() . '" title="'.$title.'">'. $title .'</a>'.$after_title;
 	 			else: $output .= $before_title.'<a href="' . get_permalink() . '" title="'.$page_name.'">'. $page_name .'</a>'.$after_title;
 	 			endif;
