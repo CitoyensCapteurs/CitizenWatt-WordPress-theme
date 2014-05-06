@@ -2016,3 +2016,15 @@ a#scroll-up:hover {
 	float: right;
 }
 
+.parallax {
+	background:url(http://ks.citoyenscapteurs.net/wordpress/wp-content/uploads/2014/05/oli1000.jpg) center 0 no-repeat fixed;
+	min-height: 400px;
+	vertical-align: middle;
+}
+
+.parallax-content {
+	margin: auto 20%;
+	background-color: rgba(255,255,255,0.5);
+}
+
+
