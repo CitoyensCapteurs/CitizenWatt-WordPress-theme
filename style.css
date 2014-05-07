@@ -1793,7 +1793,7 @@ a#scroll-up:hover {
 		width: 94%;
 	}
 }
-@media screen and (max-width: 1078px) {
+/*RESPONSIVE MOCHE DELETED BY PHYKS @media screen and (max-width: 1078px) {
 	body {
 		padding: 15px 0;
 	}
@@ -1864,7 +1864,7 @@ a#scroll-up:hover {
 	.tg-after-three-blocks-clearfix {
 		clear: none;
 	}
-}
+}*/
 @media only screen and (min-width: 768px) and (max-width: 900px) {
 	#featured-slider .slider-title-head {
 		margin-bottom: 0;
