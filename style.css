@@ -904,6 +904,9 @@ li.default-menu {
 #main {
 	padding: 40px 0 10px 0;
 }
+.page-template-page-templatesparallax-php #main {
+	padding: 0;
+}
 .widget_service_block {
 	margin-bottom: 30px;
 	padding-top: 30px;
@@ -2018,13 +2021,16 @@ a#scroll-up:hover {
 
 .parallax {
 	background:url(http://ks.citoyenscapteurs.net/wordpress/wp-content/uploads/2014/05/oli1000.jpg) center 0 no-repeat fixed;
-	min-height: 400px;
-	vertical-align: middle;
+	/*min-height: 400px;*/
 }
 
 .parallax-content {
-	margin: auto 20%;
-	background-color: rgba(255,255,255,0.5);
+	margin: auto;
+	padding: 50px 5%;
+	
+	clear: both;
+	text-align: center;
+	background-color: rgba(255,255,255,0.7);
 }
 
 
