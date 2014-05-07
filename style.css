@@ -2023,7 +2023,10 @@ a#scroll-up:hover {
 }
 
 .parallax {
-	background:url(http://ks.citoyenscapteurs.net/wordpress/wp-content/uploads/2014/05/oli1000.jpg) center 0 no-repeat fixed;
+	background-position: center;
+	background-origin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	/*min-height: 400px;*/
 }
 

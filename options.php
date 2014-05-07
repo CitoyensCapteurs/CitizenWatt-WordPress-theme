@@ -247,6 +247,45 @@ function optionsframework_options() {
 		);
 	}	
 
+	/*************************************************************************/
+
+	$options[] = array(
+		'name' => __( 'Parallax', 'spacious' ),
+		'type' => 'heading'
+	);
+
+	// Slide options
+	foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
+		$lower = strtolower($num);
+		$options[] = array(
+			'name' 	=>	sprintf( __( 'Image Upload #%1$s', 'spacious' ), $lower ),
+			'desc' 	=> __( 'Upload parallax image.', 'spacious' ),
+			'id' 		=> 'citizenwatt_parallax_image_'.$lower,
+			'type' 	=> 'upload'
+		);
+		$options[] = array(
+			'name' 	=> sprintf( __( 'Parallax Slider Title %1$s', 'spacious' ), $num ),
+			'desc' 	=> __( 'Enter title for your parallax slider.', 'spacious' ),
+			'id' 		=> 'citizenwatt_parallax_title_'.$lower,
+			'std' 	=> '',
+			'type' 	=> 'text'
+		);
+		$options[] = array(
+			'name' 	=> sprintf( __( 'Parallax Slider Color %1$s', 'spacious' ), $num ),
+			'desc' 	=> __( 'Select background color for the parallax slider.', 'spacious' ),
+			'id' 		=> 'citizenwatt_parallax_color_'.$lower,
+			'std' 		=> '#FFFFFF',
+			'type' 		=> 'color'
+		);
+		$options[] = array(
+			'name' 	=> sprintf( __( 'Parallax Slider Color Opacity %1$s', 'spacious' ), $num ),
+			'desc' 	=> __( 'Select background color opacity for the parallax slider. (between 0 and 1)', 'spacious' ),
+			'id' 		=> 'citizenwatt_parallax_color_opacity_'.$lower,
+			'std' 		=> '0.7',
+			'type' 		=> 'text'
+		);
+	}	
+
 	return $options;
 }
 
