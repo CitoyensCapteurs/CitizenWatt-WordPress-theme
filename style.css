@@ -559,6 +559,9 @@ h1#site-title {
 
 /* =SEARCH WIDGET 
 ----------------------------------------------- */
+.widget_search {
+	text-align: center;
+}
 #search-submit {
 	display: none;
 }
