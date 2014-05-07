@@ -28,8 +28,8 @@ foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
 	if( is_active_sidebar( 'citizenwatt_parallax_slide_' . $lower ) ) {
 ?>
 	<!-- Parallax slider <?=$lower?>-->
-	<div class="parallax" style="background-image: url(<?= esc_url( $background_image ); ?>)">
-		<div class="parallax-content<?=$theme?>" style="background-color: <?php echo "rgba($r,$g,$b,$a)" ?>">
+	<div class="parallax<?=$theme?>" style="background-image: url(<?= esc_url( $background_image ); ?>)">
+		<div class="parallax-content" style="background-color: <?php echo "rgba($r,$g,$b,$a)" ?>">
 			<?php
 			if ( !empty( $title ) ) { echo '<h2 class="parallax-title">' . esc_html( $title ) . '</h2>'; }
 			// Calling the slide one of the parallax page if it exists.
