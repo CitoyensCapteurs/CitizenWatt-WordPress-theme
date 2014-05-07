@@ -18,6 +18,8 @@ foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
 	$lower = strtolower($num);
 	$background_image = of_get_option( 'citizenwatt_parallax_image_'.$lower , '' );
 	$title = of_get_option( 'citizenwatt_parallax_title_'.$lower , '' );
+	$theme = of_get_option( 'citizenwatt_parallax_theme_'.$lower , '' );
+	$theme = $theme == 'default' ? '' : ' parallax-theme-' . $theme;
 	$color = of_get_option( 'citizenwatt_parallax_color_'.$lower , '' );
 	$r = hexdec(substr($color, 1, 2));
 	$g = hexdec(substr($color, 3, 2));
@@ -27,7 +29,7 @@ foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
 ?>
 	<!-- Parallax slider <?=$lower?>-->
 	<div class="parallax" style="background-image: url(<?= esc_url( $background_image ); ?>)">
-		<div class="parallax-content" style="background-color: <?php echo "rgba($r,$g,$b,$a)" ?>">
+		<div class="parallax-content<?=$theme?>" style="background-color: <?php echo "rgba($r,$g,$b,$a)" ?>">
 			<?php
 			if ( !empty( $title ) ) { echo '<h3>' . esc_html( $title ) . '</h3>'; }
 			// Calling the slide one of the parallax page if it exists.

@@ -284,6 +284,17 @@ function optionsframework_options() {
 			'std' 		=> '0.7',
 			'type' 		=> 'text'
 		);
+		$options[] = array(
+			'name' 	=> sprintf( __( 'Parallax Slider Theme %1$s', 'spacious' ), $num ),
+			'desc' 	=> __( 'Select a theme for the parallax slider.', 'spacious' ),
+			'id' 		=> 'citizenwatt_parallax_theme_'.$lower,
+			'std' 		=> 'default',
+			'type' 		=> 'radio',
+			'options' 	=> array(
+								'default' 	=> __( 'Default theme', 'spacious' ),
+								'dark' 	=> __( 'Dark theme', 'spacious' ),
+							)
+		);
 	}	
 
 	return $options;
