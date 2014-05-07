@@ -157,13 +157,27 @@ function spacious_widgets_init() {
 		'after_title'   	=> '</span></h3>'
 	) );
 
+	foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
+		$lower = strtolower($num);
+		// Registering parallax template sidebar
+		register_sidebar( array(
+			'name' 				=> __( 'Parallax Sidebar ' . $num, 'spacious' ),
+			'id' 					=> 'citizenwatt_parallax_slide_' . $lower,
+			'description'   	=> __( 'Define parallax slider ' . $lower, 'spacious' ),
+			'before_widget' 	=> '<section id="%1$s" class="widget %2$s clearfix">',
+			'after_widget'  	=> '</section>',
+			'before_title'  	=> '<h1 class="widget-title"><span>',
+			'after_title'   	=> '</span></h1>'
+		) );
+	}
+
 	// Registering widgets
 	register_widget( "spacious_featured_single_page_widget" );
 	register_widget( "spacious_service_widget" );
 	register_widget( "spacious_call_to_action_widget" );
 	register_widget( "spacious_testimonial_widget" );
 	register_widget( "spacious_recent_work_widget" );	
-	register_widget( "spacious_cw_parallax_widget" );
+	register_widget( "citizenwatt_parallax_widget" );
 }
 
 /****************************************************************************************/
@@ -653,9 +667,9 @@ class spacious_testimonial_widget extends WP_Widget {
 /**
  * Prallax widget to show paragraphs with parallax effect (CitizenWatt addition).
  */
- class spacious_cw_parallax_widget extends WP_Widget {
- 	function spacious_cw_parallax_widget() {
- 		$widget_ops = array( 'classname' => 'widget_cw_parallax', 'description' => __( 'Show a paragraph with parallax effect.', 'spacious' ) );
+ class citizenwatt_parallax_widget extends WP_Widget {
+ 	function citizenwatt_parallax_widget() {
+ 		$widget_ops = array( 'classname' => 'citizenwatt_parallax', 'description' => __( 'Show a paragraph with parallax effect.', 'spacious' ) );
 		$control_ops = array( 'width' => 200, 'height' =>250 ); //?
 		parent::WP_Widget( false, $name = __( 'CW: Parallax', 'spacious' ), $widget_ops, $control_ops);
  	}
