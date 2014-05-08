@@ -456,7 +456,6 @@ body {
 #page {
 	max-width: 1268px;
 	margin: 0 auto;
-	background-color: #FFFFFF;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 }
 .wide-978, .wide-1218 {	
@@ -1522,7 +1521,7 @@ li.default-menu {
 /* =FOOTER WIDGET AREA 
 ----------------------------------------------- */
 .footer-widgets-wrapper {
-	background-color: #333333;
+	background-color: #231F20;
 	border-top: 1px solid #EAEAEA;
 }
 .footer-widgets-area {
