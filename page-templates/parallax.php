@@ -14,7 +14,8 @@
 
 <div id="content" class="clearfix">
 <?php
-foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
+$nums = array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty', 'Twenty-one', 'Twenty-two', 'Twenty-tree');
+foreach ($nums as $num) {
 	$lower = strtolower($num);
 	$background_image = of_get_option( 'citizenwatt_parallax_image_'.$lower , '' );
 	$title = of_get_option( 'citizenwatt_parallax_title_'.$lower , '' );
@@ -28,10 +29,10 @@ foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
 	if( is_active_sidebar( 'citizenwatt_parallax_slide_' . $lower ) ) {
 ?>
 	<!-- Parallax slider <?=$lower?>-->
-	<div class="parallax<?=$theme?>" style="background-image: url(<?= esc_url( $background_image ); ?>)">
+	<div id="parallax-slide-<?=$lower?>" class="parallax<?=$theme?>" style="background-image: url(<?= esc_url( $background_image ); ?>)">
 		<div class="parallax-content" style="background-color: <?php echo "rgba($r,$g,$b,$a)" ?>">
 			<?php
-			if ( !empty( $title ) ) { echo '<h2 class="parallax-title">' . esc_html( $title ) . '</h2>'; }
+			if ( !empty( $title ) ) { echo '<h1 class="widget-title"><span>' . $title . '</span></h1>'; }
 			// Calling the slide one of the parallax page if it exists.
 			if ( !dynamic_sidebar( 'citizenwatt_parallax_slide_' . $lower ) ):
 			endif;

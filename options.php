@@ -255,7 +255,8 @@ function optionsframework_options() {
 	);
 
 	// Slide options
-	foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
+	$nums = array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty', 'Twenty-one', 'Twenty-two', 'Twenty-tree');
+	foreach ($nums as $num) {
 		$lower = strtolower($num);
 		$options[] = array(
 			'name' 	=>	sprintf( __( 'Image Upload #%1$s', 'spacious' ), $lower ),

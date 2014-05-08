@@ -157,7 +157,8 @@ function spacious_widgets_init() {
 		'after_title'   	=> '</span></h3>'
 	) );
 
-	foreach (array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven') as $num) {
+	$nums = array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty', 'Twenty-one', 'Twenty-two', 'Twenty-tree');
+	foreach ($nums as $num) {
 		$lower = strtolower($num);
 		// Registering parallax template sidebar
 		register_sidebar( array(

@@ -2025,7 +2025,7 @@ a#scroll-up:hover {
 .parallax {
 	background-position: center;
 	background-origin: 0;
-	/*background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	/*min-height: 400px;*/
 }
@@ -2039,15 +2039,24 @@ a#scroll-up:hover {
 	background-color: rgba(255,255,255,0.7);
 }
 
-h2.parallax-title {
-	font-size: 3em;
+.parallax-content p {
+	font-size: 1.2em;
 }
+
+/* Dark parallax theme */
 
 .parallax-theme-dark {
-	color: #eeeeee;
+	background-repeat: repeat;
 }
 
-.parallax-theme-dark h1 {
+.parallax-theme-dark,
+.parallax-theme-dark h1,
+.parallax-theme-dark h2,
+.parallax-theme-dark h3,
+.parallax-theme-dark h4,
+.parallax-theme-dark h5,
+.parallax-theme-dark h6,
+.parallax-theme-dark .widget-title a {
 	color: #eeeeee;
 }
 
