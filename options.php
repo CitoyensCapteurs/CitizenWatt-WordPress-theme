@@ -293,7 +293,7 @@ function optionsframework_options() {
 			'type' 		=> 'radio',
 			'options' 	=> array(
 								'default' 	=> __( 'Default theme', 'spacious' ),
-								'dark' 	=> __( 'Dark theme', 'spacious' ),
+								'light' 	=> __( 'Light theme', 'spacious' ),
 							)
 		);
 	}	

@@ -243,8 +243,6 @@ function spacious_custom_css() {
 		$spacious_internal_css = ' blockquote { border-left: 3px solid '.$primary_color.'; }
 			.spacious-button, input[type="reset"], input[type="button"], input[type="submit"], button { background-color: '.$primary_color.'; }
 			.previous a:hover, .next a:hover { 	color: '.$primary_color.'; }
-			a { color: '.$primary_color.'; }
-			#site-title a:hover { color: '.$primary_color.'; }
 			.main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a { color: '.$primary_color.'; }
 			.main-navigation ul li ul { border-top: 1px solid '.$primary_color.'; }
 			.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover { color: '.$primary_color.'; }
@@ -259,8 +257,8 @@ function spacious_custom_css() {
 			.tg-one-half .widget-title a:hover, .tg-one-third .widget-title a:hover, .tg-one-fourth .widget-title a:hover { color: '.$primary_color.'; }
 			.pagination span { background-color: '.$primary_color.'; }
 			.pagination a span:hover { color: '.$primary_color.'; border-color: .'.$primary_color.'; }
-			.widget_testimonial .testimonial-post { border-color: '.$primary_color.' #EAEAEA #EAEAEA #EAEAEA; }
-			.call-to-action-content-wrapper { border-color: #EAEAEA #EAEAEA #EAEAEA '.$primary_color.'; }
+			.widget_testimonial .testimonial-post { border-color: '.$primary_color.' #52484B #52484B #52484B; }
+			.call-to-action-content-wrapper { border-color: #52484B #52484B #52484B '.$primary_color.'; }
 			.call-to-action-button { background-color: '.$primary_color.'; }
 			#content .comments-area a.comment-permalink:hover { color: '.$primary_color.'; }
 			.comments-area .comment-author-link a:hover { color: '.$primary_color.'; }
