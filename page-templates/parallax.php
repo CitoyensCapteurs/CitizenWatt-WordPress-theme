@@ -49,7 +49,7 @@ for ($i = 0 ; $i < count($nums) ; ++$i) {
 				endif;
 				?>
 				<p class="scroll_link">
-					<a href="<?= $next == 'one' ? '#masthead' : '#parallax-slide-' . $next ?>" class="right">
+					<a href="<?= $next == 'one' ? '#masthead' : '#parallax-slide-' . $next ?>">
 						<span></span>
 						<?= $num == 'One' ? 'Suivez le guide !' : '' ?>
 					</a>

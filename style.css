@@ -503,8 +503,8 @@ body {
 	background-color: #5f5557;
 }
 #header-text-nav-wrap {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 7px;
+	padding-bottom: 5px;
 }
 #header-left-section {
 	float: left;
@@ -514,14 +514,13 @@ body {
 	float: left;
 	padding: 0 20px 0 0;
 	max-width: 100%;
-	padding-top: 10px;
 }
 #header-logo-image img {
 	margin-bottom: 0px;
 }
 #header-text {
 	float: left;
-	padding: 10px 20px 0 0;
+	padding: 0 20px 0 0;
 }
 #site-title a {
 	font-size: 36px;
@@ -1773,6 +1772,65 @@ a#scroll-up:hover {
 	text-decoration: none;
 }
 
+
+
+/* =PARALLAX MODULE
+----------------------------------------------- */
+
+.parallax {
+	background-position: center;
+	background-origin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	min-height: 100%;
+}
+
+.parallax-content {
+	margin: 0 20%;
+	padding: 130px 5%;
+	
+	clear: both;
+	text-align: center;
+}
+
+.parallax-content .widget_service_block {
+	margin: 0 -30%;
+}
+
+.parallax-content p {
+	font-size: 1.2em;
+}
+
+.parallax-content h1 {
+	font-size: 2em;
+}
+
+.parallax-content * {
+	line-height: 150% !important;
+	text-align: left;
+}
+
+.parallax-content .widget-title {
+	margin-bottom: 1em;
+}
+
+.parallax-theme-light,
+.parallax-theme-light h1,
+.parallax-theme-light h2,
+.parallax-theme-light h3,
+.parallax-theme-light h4,
+.parallax-theme-light h5,
+.parallax-theme-light h6,
+.parallax-theme-light .widget-title a {
+	color: #666;
+}
+
+
+
+
+
 /* =RESPONSIVE STRUCTURE
 ----------------------------------------------- */
 @media screen and (max-width: 1308px) {
@@ -1967,6 +2025,10 @@ a#scroll-up:hover {
 	.wide-978 #primary, .narrow-978 #primary, .wide-978 #secondary, .narrow-978 #secondary {
 		width: 100%;
 	}
+
+	.parallax-content {
+		margin: 0 10px;
+	}
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {
@@ -2005,7 +2067,12 @@ a#scroll-up:hover {
 }
 
 
-/* Local (to put in the right section when it works) */
+
+
+
+
+/* =UTILITIES
+----------------------------------------------- */
 
 .float-left {
 	float: left;
@@ -2017,58 +2084,6 @@ a#scroll-up:hover {
 
 .right {
 	text-align: right; !important
-}
-
-
-
-.parallax {
-	background-position: center;
-	background-origin: 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	
-	min-height: 100%;
-}
-
-.parallax-content {
-	margin: 0 20%;
-	padding: 130px 5%;
-	
-	clear: both;
-	text-align: center;
-}
-
-.parallax-content .widget_service_block {
-	margin: 0 -30%;
-}
-
-.parallax-content p {
-	font-size: 1.2em;
-}
-
-.parallax-content h1 {
-	font-size: 2em;
-}
-
-.parallax-content * {
-	line-height: 150% !important;
-	text-align: left;
-}
-
-.parallax-content .widget-title {
-	margin-bottom: 1em;
-}
-
-.parallax-theme-light,
-.parallax-theme-light h1,
-.parallax-theme-light h2,
-.parallax-theme-light h3,
-.parallax-theme-light h4,
-.parallax-theme-light h5,
-.parallax-theme-light h6,
-.parallax-theme-light .widget-title a {
-	color: #666;
 }
 
 
