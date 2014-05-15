@@ -21,6 +21,7 @@ jQuery(document).ready(function(){
 			jQuery('body,html').animate({
 				scrollTop: jQuery(this.getAttribute('href')).offset().top
 			}, 800);
+			window.location.hash = this.getAttribute('href');
 			return false;
 		};
 	});

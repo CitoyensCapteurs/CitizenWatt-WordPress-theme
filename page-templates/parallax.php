@@ -36,9 +36,9 @@ for ($i = 0 ; $i < count($nums) ; ++$i) {
 ?>
 	<!-- Parallax slider <?=$lower?>-->
 	<div
-		id="parallax-slide-<?=$lower?>"
 		class="parallax<?=$theme?>"
 		style="background-image: url('<?= esc_url( $background_image ) ?>')">
+		<div class="pageid" id="parallax-slide-<?=$lower?>"></div>
 		<div style="background-color: <?= "rgba($r,$g,$b,$a)" ?>">
 
 			<div class="parallax-content">

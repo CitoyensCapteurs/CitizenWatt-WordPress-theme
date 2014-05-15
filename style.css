@@ -41,6 +41,7 @@ html {
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	position: relative;
 }
 article,
 aside,
@@ -1797,15 +1798,49 @@ a#scroll-up:hover {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	min-height: 100%;
+}
+
+.parallax .pageid {
+	position: relative;
+	top: calc(1px - 5.5em);
 }
 
 .parallax-content {
 	margin: 0 20%;
 	padding: 130px 5%;
+	padding-top: calc(130px + 5.5em);
 	
 	clear: both;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.parallax-content {
+	padding-top: calc(130px + 5.5em);
+	min-height: calc(100vh - 5.5em);
+}
+
+.parallax:first-child .parallax-content {
+	min-height: 100vh;
+}
+
+#masthead {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+#wpadminbar {
+	background-color: rgba(0,0,0,0.5);
+}
+
+#header-text-nav-container {
+	height: 5.5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .parallax-content .widget_service_block {
@@ -1960,6 +1995,7 @@ a#scroll-up:hover {
 		bottom: 15%;
 	}
 }
+
 @media screen and (max-width: 768px) {
 	#primary, #secondary {
 		float: none;
@@ -2010,6 +2046,30 @@ a#scroll-up:hover {
 	#masthead input.s {
 	    margin-left: -30px;
 	}
+
+	.parallax-content {
+		padding-top: 130px;
+		min-height: 100vh;
+	}
+
+
+	.parallax .pageid {
+		top: 0;
+	}
+
+
+	.parallax:first-child .parallax-content {
+		padding-top: calc(130px + 9em);
+	}
+
+	#masthead {
+		position: absolute;
+	}
+	
+	#header-text-nav-container {
+		height: 9em;
+	}
+
 }
 @media screen and (max-width: 767px) {
 	body {
@@ -2064,6 +2124,8 @@ a#scroll-up:hover {
 	.parallax-content .widget_service_block {
 		margin: 0;
 	}
+
+	
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {
