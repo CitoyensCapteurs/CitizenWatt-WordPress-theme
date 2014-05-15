@@ -73,12 +73,23 @@ th, td {
 caption, th, td {
 	text-align: left;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
+
+blockquote:before {
+	content : open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	vertical-align: bottom;
+	color: #E3834F;
+	font-weight: bold;
 }
+
+blockquote p {
+	display: inline;
+	margin-left: 0.5em;
+}
+
 blockquote, q {
-	quotes: "" "";
+	quotes: "“" "”";
 }
 a:focus {
 	outline: thin dotted;
@@ -237,9 +248,11 @@ blockquote {
 	font-style: italic;
 	font-weight: normal;
 	padding: 20px;	
-	border: 2px solid #928688;
+	padding-left: 1em;
+/*	border: 2px solid #928688;*/
 	border-left: 3px solid #0FBE7C;
 	margin-bottom: 20px;
+	margin-left: 2em;
 }
 blockquote em, blockquote i, blockquote cite {
 	font-style: normal;
@@ -1812,6 +1825,14 @@ a#scroll-up:hover {
 	text-align: left;
 }
 
+.parallax-content .widget-title a {
+	color: #D6D6D6 !important;
+}
+
+.parallax-content .widget-title a:hover {
+	color: white !important;
+}
+
 .parallax-content .widget-title {
 	margin-bottom: 1em;
 }
@@ -1827,8 +1848,19 @@ a#scroll-up:hover {
 	color: #666;
 }
 
+.parallax-theme-light .widget-title a {
+	color: #666 !important;
+}
+
+.parallax-theme-light .widget-title a:hover {
+	color: #222 !important;
+}
 
 
+
+#partenaires {
+	vertical-align: center;
+}
 
 
 /* =RESPONSIVE STRUCTURE
@@ -2029,6 +2061,9 @@ a#scroll-up:hover {
 	.parallax-content {
 		margin: 0 10px;
 	}
+	.parallax-content .widget_service_block {
+		margin: 0;
+	}
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {
@@ -2083,7 +2118,7 @@ a#scroll-up:hover {
 }
 
 .right {
-	text-align: right; !important
+	text-align: right;
 }
 
 

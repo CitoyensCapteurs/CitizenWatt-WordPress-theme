@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
 		});
 	});
 
-	[].forEach.call(document.querySelectorAll(".menu-homepage-container a[href^='#'], .scroll_link a[href^='#']"), function (link) {
+	[].forEach.call(document.querySelectorAll(".menu-homepage-container a[href^='#'], .scroll_link a[href^='#'], .widget-title a[href^='#']"), function (link) {
 		link.onclick = function (e) {
 			jQuery('body,html').animate({
 				scrollTop: jQuery(this.getAttribute('href')).offset().top
