@@ -123,6 +123,12 @@ embed, iframe, object {
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), url('font/Lato.woff') format('woff');
+}
 
 /* =GLOBAL
 ----------------------------------------------- */
@@ -507,6 +513,8 @@ body {
 /* =HEADER 
 ----------------------------------------------- */
 #masthead {
+	top: 0;
+	width: 100vw;
 }
 #header-meta {
 	background-color: #F8F8F8;
@@ -926,6 +934,9 @@ li.default-menu {
 }
 .page-template-page-templatesparallax-php #main {
 	padding: 0;
+}
+.page-template-page-templatesparallax-php #masthead {
+	position: fixed;
 }
 .widget_service_block {
 	margin-bottom: 30px;
@@ -1460,6 +1471,10 @@ li.default-menu {
 
 /* =WIDGETS 
 ----------------------------------------------- */
+#secondary .widget {
+	background-color: #928688;
+	padding: 0.75em;
+}
 #secondary .widget ul li, #colophon .widget ul li {
 	line-height: 1.5;
 	border-bottom: 2px solid #928688;
@@ -1607,6 +1622,8 @@ a#scroll-up:hover {
 	color: #FFFFFF !important;
 	background-color: #E3834F;
 	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
 }
 .scroll_link a[href^='#'] span:before {
 	content: '\f431';
@@ -1826,12 +1843,6 @@ a#scroll-up:hover {
 	min-height: 100vh;
 }
 
-#masthead {
-	position: fixed;
-	top: 0;
-	width: 100vw;
-}
-
 #wpadminbar {
 	background-color: rgba(0,0,0,0.5);
 }
@@ -1911,92 +1922,23 @@ a#scroll-up:hover {
 		width: 94%;
 	}
 }
-/*RESPONSIVE MOCHE DELETED BY PHYKS @media screen and (max-width: 1078px) {
-	body {
-		padding: 15px 0;
-	}
-	#page { 
-		width: 97%; 
-	}
-	.wide-1218 #page, .wide-978 #page {
-		width: 100%;
-	}
-	.inner-wrap {
-		width: 94%;
-	}	
-	#featured-slider .entry-container {
-		max-width: 60%;
-		top: 15%;
-	}
-	.call-to-action-content {
-		float: none;
-		width: 100%;
-		margin-bottom: 10px;
-		text-align: center;
-	}
-	.call-to-action-button { 
-		width: 93%;
-	}
-	.footer-socket-wrapper .copyright {
-		float: none;
-		max-width: 100%;
-		text-align: center;
-		margin-bottom: 5px;
-	}
-	.footer-socket-wrapper .small-menu {
-		float: none;
-		text-align: center;
-	}
-	.footer-socket-wrapper .small-menu li {
-		float: none;
-		display: inline;
-	}
-	.footer-socket-wrapper .small-menu a {
-		float: none;
-		display: inline;
-		padding: 5px 5px 0;
-	}
-	.small-menu li.default-menu, li.default-menu { 
-		display: none; 
-	}	
-	.tg-one-half, .tg-one-third, .tg-one-fourth {	
-		float: left;
-		width: 46.7684729%;
-	}
-	.tg-one-half-last, .tg-one-fourth-last {
-		float: right;
-	}
-	.tg-service-left { float: left; margin: 0; }
-	.tg-service-right { float: right; margin: 0; }
-	.tg-column-1, .tg-column-3 {
-		float: left;
-		width: 46.7684729%;
-	}
-	.tg-column-2, .tg-column-4 {
-		float: right;
-		margin-right: 0;
-	}
-	.tg-after-two-blocks-clearfix {
-		clear: both;;
-	}
-	.tg-after-three-blocks-clearfix {
-		clear: none;
-	}
-}*/
-@media only screen and (min-width: 768px) and (max-width: 900px) {
-	#featured-slider .slider-title-head {
-		margin-bottom: 0;
-	}
-	#featured-slider .entry-content {
-		display: none;
-	}
-	#featured-slider .entry-container {
-		top: auto;
-		bottom: 15%;
-	}
-}
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 860px) {
+	.parallax .pageid {
+		top: 0;
+	}
+
+
+	.parallax:first-child .parallax-content {
+		padding-top: calc(130px + 9em);
+	}
+
+	#header-text-nav-container {
+		height: 9em;
+	}
+
+
 	#primary, #secondary {
 		float: none;
 		width: 100%;
@@ -2047,31 +1989,8 @@ a#scroll-up:hover {
 	    margin-left: -30px;
 	}
 
-	.parallax-content {
-		padding-top: 130px;
-		min-height: 100vh;
-	}
-
-
-	.parallax .pageid {
-		top: 0;
-	}
-
-
-	.parallax:first-child .parallax-content {
-		padding-top: calc(130px + 9em);
-	}
-
-	#masthead {
-		position: absolute;
-	}
-	
-	#header-text-nav-container {
-		height: 9em;
-	}
-
-}
-@media screen and (max-width: 767px) {
+/*}
+@media screen and (max-width: 767px) {*/
 	body {
 		padding: 5px 0;
 	}
@@ -2121,10 +2040,12 @@ a#scroll-up:hover {
 	.parallax-content {
 		margin: 0 10px;
 	}
+
 	.parallax-content .widget_service_block {
 		margin: 0;
 	}
 
+	
 	
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {

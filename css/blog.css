@@ -1,0 +1,98 @@
+
+/*
+ Blog Style for CitizenWatt
+ */
+
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url('../font/OpenSans-Regular.ttf');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'), url('../font/OpenSans-Light.ttf');
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('../font/OpenSans-Bold.ttf');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../font/OpenSans-Italic.ttf');
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../font/OpenSans-BoldItalic.ttf');
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+body.single #page {
+	background-color: white;
+	color: #3C4043;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6em;
+}
+
+body.single #page #primary p {
+	color: #3C4043;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6em;
+}
+
+body.single .header-post-title-class {
+	color: #242628;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+#colophon {
+	color: white;
+}
+
+/*------------------------------
+	Mailing-list
+  ------------------------------*/
+#mc-embedded-subscribe-form input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 5px;
+	border: medium none;
+	box-sizing: border-box;
+	line-height: 1.4em;
+	font-size: 0.8em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#mc-embedded-subscribe-form input[type="submit"] {
+	/*background-color: rgba(251, 160, 23, 1);*/
+	background-color: #CC7412;
+}
+
+#secondary .widget {
+	background: none;
+}
+
+#newsletter {
+	padding: 25px 30px 30px;
+	font-family: 'Open Sans', sans-serif;
+	/*background-color: rgba(252, 192, 102, 1);*/
+	background-color: #ED8919;
+}
+
+#newsletter p {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+

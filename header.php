@@ -30,6 +30,7 @@
  */
 wp_head();
 ?>
+<link rel="stylesheet" href="<?=home_url( '/wp-content/themes/spacious/css/blog.css')?>" />
 </head>
 
 <body <?php body_class(); ?>>

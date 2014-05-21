@@ -38,7 +38,7 @@ for ($i = 0 ; $i < count($nums) ; ++$i) {
 	<div
 		class="parallax<?=$theme?>"
 		style="background-image: url('<?= esc_url( $background_image ) ?>')">
-		<div class="pageid" id="parallax-slide-<?=$lower?>"></div>
+		<div class="pageid" id="<?=$lower?>"></div>
 		<div style="background-color: <?= "rgba($r,$g,$b,$a)" ?>">
 
 			<div class="parallax-content">
@@ -49,7 +49,7 @@ for ($i = 0 ; $i < count($nums) ; ++$i) {
 				endif;
 				?>
 				<p class="scroll_link">
-					<a href="<?= $next == 'one' ? '#masthead' : '#parallax-slide-' . $next ?>">
+					<a href="#<?= $next ?>">
 						<span></span>
 						<?= $num == 'One' ? 'Suivez le guide !' : '' ?>
 					</a>
