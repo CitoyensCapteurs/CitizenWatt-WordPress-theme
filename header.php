@@ -31,6 +31,9 @@
 wp_head();
 ?>
 <link rel="stylesheet" href="<?=home_url( '/wp-content/themes/spacious/css/blog.css')?>" />
+<?php if ($pagename == 'mentions-legales') { ?>
+<link rel="stylesheet" href="<?=home_url( '/wp-content/themes/spacious/css/mentions_legales.css')?>" />
+<?php } ?>
 </head>
 
 <body <?php body_class(); ?>>
